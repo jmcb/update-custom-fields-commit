@@ -1,6 +1,6 @@
 module UpdateCustomFieldsOnCommit
-    class Hooks < Redmine::Hook::model_changeset_scan_commit_for_issue_ids_pre_issue_update
-        def update_custom_fields_on_commit (context = { })
+    class Hooks < Redmine::Hook::ModelListener
+        def model_changeset_scan_commit_for_issue_ids_pre_issue_update (context = { })
             if context[:issue]
                 if context[:issue][:status].is_closed
                     if context[:issue][:tracker].name == "Bug"
