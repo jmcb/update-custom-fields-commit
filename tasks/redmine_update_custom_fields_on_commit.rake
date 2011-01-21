@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :redmine_projects_page_forward do
+# task :redmine_update_custom_fields_on_commit do
 #   # Task goes here
 # end

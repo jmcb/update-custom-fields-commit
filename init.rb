@@ -1,11 +1,13 @@
 require 'redmine'
 
-Redmine::Plugin.register :projects_page_forward do
-  name 'Projects Page Forward'
+require 'update-custom-fields-commit/hooks'
+
+Redmine::Plugin.register :update_custom_fields_on_commit do
+  name 'Update custom fields upon commit'
   author 'Jon McManus'
-  url 'http://github.com/jmcb/projects-page-forward'
+  url 'http://github.com/jmcb/update-custom-fields-commit'
   author_url 'http://githu.com/jmcb'
-  description 'Forward a Redmine user to the projects page, bypassing the home page.'
+  description 'Update specific custom fields, dependent on tracker, when closing an issue via commit.'
   version '0.1'
 
   requires_redmine :version_or_higher => '0.8.0'
