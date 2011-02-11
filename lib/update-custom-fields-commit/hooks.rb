@@ -14,6 +14,8 @@ module UpdateCustomFieldsOnCommit
                         issue.custom_field_values[3] = "Done"
                     end
                 end
+
+                issue.save
             end
 
         end
