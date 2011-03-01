@@ -1,0 +1,5 @@
+<% (@settings["fields"] || []).each do |field| -%>
+    <p><label>Tracker</label></p>
+    <%= select_tag 'field[tracker]', @Tracker.find(:all), :size => 80 %>
+    <br /><em>Select which tracker this applies to.</em></p>
+<% end; reset_cycle %>
