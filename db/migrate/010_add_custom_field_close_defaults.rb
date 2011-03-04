@@ -1,6 +1,6 @@
-class AddCustomFieldsCloseDefaults < ActiveRecord::Migration
+class AddCustomFieldCloseDefaults < ActiveRecord::Migration
   def self.up
-    add_column :custom_fields, :close_default, :string, :null => "", :default => ""
+    add_column :custom_fields, :close_default, :string, {:null => "", :default => ""}
   end
 
   def self.down
