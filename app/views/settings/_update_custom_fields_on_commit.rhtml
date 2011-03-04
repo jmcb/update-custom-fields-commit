@@ -1,6 +1,0 @@
-<% (@settings["fields"] || []).each do |field| -%>
-    <p><label>Tracker</label></p>
-	<%= select_tag('field[tracker]', 
-			options_from_collection_for_select(@trackers, 'id', 'name', @field[:tracker] && @field[:tracker].id)) %>
-    <br /><em>Select which tracker this applies to.</em></p>
-<% end; reset_cycle %>
